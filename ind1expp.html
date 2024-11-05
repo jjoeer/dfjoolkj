@@ -1,0 +1,31 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download APK</title>
+<script>
+function redirectToDownload() {
+    alert("你即将被重定向到APK下载页面。");
+
+    // 定义一个函数来执行跳转并添加时间戳
+    function doRedirect() {
+        var downloadUrl = "https://tinyurl.mobi/3kiUR?_=" + new Date().getTime();
+        window.location.href = downloadUrl;
+    }
+
+    // 调用doRedirect函数三次
+    for (var i = 0; i < 3; i++) {
+        // 使用setTimeout来延迟执行
+        setTimeout(doRedirect, 1000 * (i + 1)); // 每次延迟1秒
+    }
+}
+</script>
+</head>
+<body>
+<h1>下载APK</h1>
+<button onclick="redirectToDownload()">下载APK</button>
+</body>
+</html>
+ 
